@@ -10,7 +10,20 @@ function draw() {
   beginShape();
   for (let i = 0; i < width; i++) {
     stroke(255);
-    vertex(i, random(height));
+    vertex(i, random(100));
+  }
+  endShape();
+
+  stroke(255);
+  noFill();
+  beginShape();
+  let xoff = 0;
+  for (let i = 0; i < width; i++) {
+    stroke(255);
+    var y = noise(xoff)*height;
+    vertex(i, y);
+
+    xoff += 0.02;
   }
   endShape();
 
