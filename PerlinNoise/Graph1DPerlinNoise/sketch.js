@@ -23,7 +23,7 @@ function draw() {
   let xoff = start;
   for (let i = 0; i < width; i++) {
     stroke(255);
-    var y = noise(xoff)*height;
+    var y = noise(xoff) * height;
     vertex(i, y);
 
     xoff += 0.02;
