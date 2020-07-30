@@ -1,3 +1,6 @@
+let inc = 0.01;
+let start = 0;
+
 function setup() {
   createCanvas(400, 400);
 }
@@ -17,7 +20,7 @@ function draw() {
   stroke(255);
   noFill();
   beginShape();
-  let xoff = 0;
+  let xoff = start;
   for (let i = 0; i < width; i++) {
     stroke(255);
     var y = noise(xoff)*height;
@@ -27,5 +30,7 @@ function draw() {
   }
   endShape();
 
-  noLoop();
+  start += inc;
+
+  // noLoop();
 }
