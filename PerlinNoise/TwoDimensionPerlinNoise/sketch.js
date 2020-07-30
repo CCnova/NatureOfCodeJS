@@ -7,7 +7,7 @@ function setup() {
 
 function draw() {
   background(51);
-  // let x = random(width);
+
   let x = map(noise(xoff1), 0, 1, 0, width);
   let y = map(noise(xoff2), 0, 1, 0, width);
   xoff1 += 0.02;
